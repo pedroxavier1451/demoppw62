@@ -1,0 +1,32 @@
+clearfix {
+  /* para llamar a una de las clases desde html*/
+  clear: both;
+  /* para que los elementos que se estan subiendo se queden en su mismo lugar\*/
+}
+
+.cabecera {
+  padding: 20px;
+}
+
+.menu {
+  float: left;
+  width: 15%;
+  height: 100vh;
+}
+
+.contenido {
+  float: left;
+  width: 60%;
+  padding: 20px;
+}
+
+.contacto {
+  float: right;
+  width: 20%;
+  height: 100vh;
+}
+
+.pieDePagina {
+  clear: both;
+  padding: 20px;
+}

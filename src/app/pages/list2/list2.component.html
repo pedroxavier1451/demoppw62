@@ -1,0 +1,44 @@
+
+<h2>Lista Contactos</h2>
+<div class="btn">
+<label>Mostrar Contactos</label>
+<mat-slide-toggle [(ngModel)]="isChecked"> </mat-slide-toggle>
+<p>Slide Toggle Checked: {{isChecked}}</p>
+</div>
+<br>
+<br>
+
+<span *ngIf="listadoContactos.length == 0">No existen contactos</span>
+<!--
+<ul>
+    <li *ngFor="let contacto of listadoContactos">
+        <a>{{contacto.nombre}} | {{contacto.correo}} | {{contacto.mensaje}}</a>
+        <a>Editar</a>
+        <a >Eliminar</a>
+    </li>
+</ul>
+-->
+<div id="elemento">
+<ul>
+    <table>
+        <thead *ngIf="listadoContactos.length !== 0">
+        <tr>
+        <th>Nombre</th>
+        <th>Correo electrónico</th>
+        <th>Mensaje</th>
+        <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contacto of listadoContactos">
+        <td>{{contacto.nombre}}</td>
+        <td>{{contacto.correo}}</td>
+        <td>{{contacto.mensaje}}</td>
+        <td><a id = "editar" (click)="editar(contacto)">Editar</a>
+        &nbsp; <a id = "eliminar" (click)="eliminar(contacto)">Eliminar</a></td>
+        </tr>
+    </tbody>
+    </table>
+</ul>
+</div>
+  
