@@ -19,6 +19,8 @@ export class List2Component {
     this.listadoContactos = contactoService.getList()
     console.log('listadoContactos', this.listadoContactos)
     this.listadoContactosFire = contactoService.getAll()
+    console.log('listadoContactosFire', this.listadoContactosFire)
+    
   }
 
   editar(contacto: Contacto){
@@ -33,13 +35,16 @@ export class List2Component {
   }
   
   eliminar(contacto: Contacto){
+    this.contactoService.delete(contacto.uid);
 
+    /*
     for(let i = 0 ; i < this.listadoContactos.length ; i++){
       if(this.listadoContactos[i] === contacto){
         console.log("son iguales");
         this.listadoContactos.splice(i,1);
       }
     }
+    */
   }
 
   
