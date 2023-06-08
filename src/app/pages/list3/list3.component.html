@@ -1,15 +1,23 @@
 
-<h2>Ventajas de Angular</h2>
+<h1>Produto</h1>
 
-<nav>
-    <ul>
-      <li><a >Implementación de la arquitectura MVC</a></li>
-      <li><a >Arquitectura de diseño mejorada</a></li>
-      <li><a >Módulos</a></li>
-      <li><a >Servicios e inyección de dependencia (DI)</a></li>
-      <li><a >Directivas personalizadas</a></li>
-      <li><a >TypeScript: mejores herramientas, código más limpio y mayor escalabilidad</a></li>
-    </ul>
-</nav>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input type="text" id="name" [(ngModel)]="producto.nombre"   name="name" required matInput placeholder="Nombre de usuario">
+  </mat-form-field>
 
+  <mat-form-field class="example-full-width">
+    <mat-label>Precio</mat-label>
+    <input type="email" id="email" [(ngModel)]="producto.precio"  name="email" required matInput placeholder="Correo de usuario" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Marca</mat-label>
+    <input id="message" [(ngModel)]="producto.marca" name="message" required matInput placeholder="Marca de producto">
+  </mat-form-field>
+
+<button type="submit" (click)="guardar()">Enviar</button>
+<button type="submit" (click)="actualizar()">Actualizar</button>
+</form>
 

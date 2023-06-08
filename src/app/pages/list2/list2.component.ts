@@ -37,14 +37,14 @@ export class List2Component {
   eliminar(contacto: Contacto){
     this.contactoService.delete(contacto.uid);
 
-    /*
+    
     for(let i = 0 ; i < this.listadoContactos.length ; i++){
       if(this.listadoContactos[i] === contacto){
         console.log("son iguales");
         this.listadoContactos.splice(i,1);
       }
     }
-    */
+    
   }
 
   

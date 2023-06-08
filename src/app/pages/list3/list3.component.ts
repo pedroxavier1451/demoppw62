@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Producto } from 'src/app/domain/producto';
+import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
   selector: 'app-list3',
@@ -6,5 +9,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./list3.component.scss']
 })
 export class List3Component {
+  producto: Producto = new Producto();
 
+  constructor(private produtoService: ProdutoService,
+    private router: Router) {
+
+      let params = this.router.getCurrentNavigation()?.extras.queryParams;
+      if(params){
+        console.log(params)
+        this.producto = new Producto()
+        this.producto = params['producto']
+      }
+    }
+
+  guardar(){
+    console.log(this.producto);
+    this.produtoService.save(this.producto)
+    this.producto = new Producto()
+  }
+
+  actualizar(){
+    console.log(this.producto)
+    this.producto = new Producto();
+  }
 }

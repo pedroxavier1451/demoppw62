@@ -27,7 +27,6 @@ export class ContactoService {
     return this.contactos //Retorna los contactos
   }
   
-
   getAll() {
     return this.contactosRef.valueChanges();
   }

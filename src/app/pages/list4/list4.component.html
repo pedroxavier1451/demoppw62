@@ -1,11 +1,35 @@
 
-<h2>Desventajas de Angular</h2>
 
-<nav>
-    <ul>
-      <li><a >Opciones de SEO limitadas</a></li>
-      <li><a >Angular es detallado y complejo</a></li>
-      <li><a >Curva de aprendizaje pronunciada</a></li>
-      <li><a >La documentación de CLI carece de detalles</a></li>
-    </ul>
-</nav>
+<span *ngIf="listadoProductos.length == 0">No existen productos</span>
+<!--
+<ul>
+    <li *ngFor="let contacto of listadoContactos">
+        <a>{{contacto.nombre}} | {{contacto.correo}} | {{contacto.mensaje}}</a>
+        <a>Editar</a>
+        <a >Eliminar</a>
+    </li>
+</ul>
+-->
+<div id="elemento">
+<ul>
+    <table>
+        <thead *ngIf="listadoProductos.length !== 0">
+        <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Marca</th>
+        <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of listadoProductosFire | async">
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.precio}}</td>
+        <td>{{producto.marca}}</td>
+        <td><a id = "editar" (click)="editar(producto)">Editar</a>
+        &nbsp; <a id = "eliminar" (click)="eliminar(producto)">Eliminar</a></td>
+        </tr>
+    </tbody>
+    </table>
+</ul>
+</div>
