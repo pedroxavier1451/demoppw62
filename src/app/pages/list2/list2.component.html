@@ -30,7 +30,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let contacto of listadoContactos">
+        <tr *ngFor="let contacto of listadoContactosFire | async">
         <td>{{contacto.nombre}}</td>
         <td>{{contacto.correo}}</td>
         <td>{{contacto.mensaje}}</td>
