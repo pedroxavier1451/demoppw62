@@ -12,9 +12,9 @@ export class ContactComponent {
 
   contacto: Contacto = new Contacto();
 
-  
   constructor(private contactoService: ContactoService,
     private router: Router) {
+
       let params = this.router.getCurrentNavigation()?.extras.queryParams;
       if(params){
         console.log(params)

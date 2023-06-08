@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "democonta": {
+      "hosting": {
+        "demoppw62": [
+          "democonta"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "democonta"
+  }
+}
