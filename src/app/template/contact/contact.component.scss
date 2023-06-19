@@ -1,39 +1,28 @@
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 275px;
+/* Estilos CSS para el anuncio */
+.ad-container {
+  width: 300px;
+  height: 380px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
-
-label {
-  margin-top: 0.5rem;
-  font-size: 1em;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.ad-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-
-input,
-textarea {
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+.ad-image {
+  width: 200px;
+  height: 250px;
+  margin-bottom: 10px;
 }
-
-button[type="submit"] {
-  background-color: black;
-  color: white;
-  padding: 1rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  margin-top: 1rem;
-  cursor: pointer;
+.ad-description {
+  font-size: 14px;
+  color: #666;
 }
-
-button[type="submit"]:hover {
-  background-color: gray;
-}
-
-h1 {
-  margin-left: 80px;
+.ad-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
 }

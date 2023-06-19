@@ -25,13 +25,12 @@ export class List4Component {
 
   editar(producto: Producto){
     console.log(producto)
-    console.log(this.listadoProductos)
     let params: NavigationExtras = {
       queryParams: {
         producto: producto
       }
     }
-    this.router.navigate(['template/contact'], params)
+    this.router.navigate(['paginas/lista3'], params)
   }
   
   eliminar(producto: Producto){

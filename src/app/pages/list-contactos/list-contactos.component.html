@@ -1,2 +1,22 @@
-<h1>Angular</h1>
-<img src="https://miro.medium.com/v2/resize:fit:480/1*9A6E9kaZZ54idy0HLSlh-A.png" alt="Logo Angular">
+<h1>Contacto</h1>
+
+<form>
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input type="text" id="name" [(ngModel)]="contacto.nombre"   name="name" required matInput placeholder="Nombre de usuario">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Correo Electronico</mat-label>
+    <input type="email" id="email" [(ngModel)]="contacto.correo"  name="email" required matInput placeholder="Correo de usuario" >
+  </mat-form-field>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Deja un comentario</mat-label>
+  <textarea id="message" [(ngModel)]="contacto.mensaje" name="message" required matInput placeholder="Buena pagina"></textarea>
+</mat-form-field>
+
+<button type="submit" (click)="guardar()">Enviar</button>
+<button type="submit" (click)="actualizar()">Actualizar</button>
+</form>
+

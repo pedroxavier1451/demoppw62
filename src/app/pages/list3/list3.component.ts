@@ -26,10 +26,11 @@ export class List3Component {
     console.log(this.producto);
     this.produtoService.save(this.producto)
     this.producto = new Producto()
+    this.router.navigate(['paginas/lista4'])
   }
 
   actualizar(){
-    console.log(this.producto)
-    this.producto = new Producto();
+    this.produtoService.update(this.producto.uid, this.producto)
+    this.router.navigate(['paginas/lista4'])
   }
 }

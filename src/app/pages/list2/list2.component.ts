@@ -25,13 +25,12 @@ export class List2Component {
 
   editar(contacto: Contacto){
     console.log(contacto)
-    console.log(this.listadoContactos)
     let params: NavigationExtras = {
       queryParams: {
         contacto: contacto
       }
     }
-    this.router.navigate(['template/contact'], params)
+    this.router.navigate(['paginas/listaContactos'], params)
   }
   
   eliminar(contacto: Contacto){
